@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submission | NST-SDC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>NST-SDC</h1>
+    </header>
+
+    <div class="container">
+        <h2>Project Submission Form</h2>
+        <form id="submissionForm">
+            <label for="email">Email (@adypu.edu.in only):</label>
+            <input type="email" id="email" required>
+            <span id="emailError" class="error"></span>
+
+            <label for="github">GitHub Username:</label>
+            <input type="text" id="github" required>
+
+            <label for="projectUrl">Project URL:</label>
+            <input type="url" id="projectUrl" required>
+
+            <label for="description">Project Description:</label>
+            <textarea id="description" rows="4" required></textarea>
+
+            <label for="commits">Total Commits (Last 30 Days):</label>
+            <input type="number" id="commits" min="0" required>
+
+            <label for="proof">Upload Proof (Screenshot):</label>
+            <input type="file" id="proof" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 NST-SDC. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
