@@ -3,44 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Submission | NST-SDC</title>
+    <title>Project Submission Form</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>NST-SDC</h1>
-    </header>
-
     <div class="container">
         <h2>Project Submission Form</h2>
-        <form id="submissionForm">
-            <label for="email">Email (@adypu.edu.in only):</label>
-            <input type="email" id="email" required>
+        <form action="https://formspree.io/f/myzkdkon" method="POST" id="submissionForm">
+            <!-- Email Input from Formspree -->
+            <label for="email">Your email:</label>
+            <input type="email" name="email" id="email" required>
             <span id="emailError" class="error"></span>
 
+            <!-- Project Details -->
             <label for="github">GitHub Username:</label>
-            <input type="text" id="github" required>
+            <input type="text" name="github" id="github" required>
 
             <label for="projectUrl">Project URL:</label>
-            <input type="url" id="projectUrl" required>
+            <input type="url" name="projectUrl" id="projectUrl" required>
 
             <label for="description">Project Description:</label>
-            <textarea id="description" rows="4" required></textarea>
+            <textarea name="description" id="description" rows="4" required></textarea>
 
             <label for="commits">Total Commits (Last 30 Days):</label>
-            <input type="number" id="commits" min="0" required>
+            <input type="number" name="commits" id="commits" min="0" required>
 
+            <!-- Proof Upload -->
             <label for="proof">Upload Proof (Screenshot):</label>
-            <input type="file" id="proof" accept="image/*" required>
+            <input type="file" name="proof" id="proof" accept="image/*" required>
 
+            <!-- Additional Message from Formspree -->
+            <label for="message">Your message:</label>
+            <textarea name="message" id="message" rows="4"></textarea>
+
+            <!-- Submit Button -->
             <button type="submit">Submit</button>
             <p id="message"></p>
         </form>
     </div>
-
-    <footer>
-        <p>&copy; 2025 NST-SDC. All Rights Reserved.</p>
-    </footer>
+    <script defer src="script.js"></script>
 </body>
 </html>
